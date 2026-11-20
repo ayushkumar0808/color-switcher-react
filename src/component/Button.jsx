@@ -1,5 +1,9 @@
 import React from "react";
 
-export const Button = ({ color, children }) => {
-  return <button style={{ backgroundColor: color }}>{children}</button>;
+export const Button = ({ color, fn, children }) => {
+  return (
+    <button onClick={() => fn(color)} style={{ backgroundColor: color }}>
+      {children}
+    </button>
+  );
 };
